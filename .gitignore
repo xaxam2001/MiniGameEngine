@@ -1,0 +1,24 @@
+﻿# vcpkg
+vcpkg_installed/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build outputs
+Debug/
+Release/
+x64/
+x86/
+Win32/
+
+# Rider
+.idea/
+
+# Temporary files
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
