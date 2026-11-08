@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-# Real-Time Engine & Computational Geometry Simulation
+# A simple Game Engine with a small 3D renderer
 
-A modular C++ real-time engine prototype designed to simulate and visualize 3D computational geometry algorithms, featuring dynamic point cloud generation, 3D Incremental Convex Hull, and 3D Delaunay Triangulation.
+A C++ real-time engine prototype made to simulate and visualize 3D computational geometry algorithms, featuring dynamic point cloud generation, 3D Incremental Convex Hull, and 3D Delaunay Triangulation.
 
 ---
 
@@ -31,9 +30,9 @@ A modular C++ real-time engine prototype designed to simulate and visualize 3D c
 
 ```text
 .
-├── YourProject.sln
-└── YourProject/
-    ├── YourProject.vcxproj
+├── MiniGameEngine.sln
+└── MiniGameEngine/
+    ├── MiniGameEngine.vcxproj
     ├── assets/              # Shaders, config files, and point data
     ├── include/             # Public header files (.h)
     │   ├── Core/            # EngineContext, InfraStructure, Utils
@@ -64,11 +63,7 @@ vcpkg integrate install
 
 ### 2. Open and Build
 
-1. Open `YourProject.sln` in **JetBrains Rider** (or Visual Studio).
+1. Open `MiniGameEngine.sln` in **JetBrains Rider** (or Visual Studio).
 2. Select your build target configuration (e.g., `Debug | x64` or `Release | x64`).
 3. Build the solution (`Ctrl + Shift + B`).
 4. Run the application (`F5` or `Shift + F10`).
-=======
-# MiniGameEngine
-Real-Time Engine &amp; Computational Geometry Simulation
->>>>>>> a85baf3bc8d02bb12b0a7d2bd2929054a20c8f53
