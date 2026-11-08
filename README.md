@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Real-Time Engine & Computational Geometry Simulation
 
 A modular C++ real-time engine prototype designed to simulate and visualize 3D computational geometry algorithms, featuring dynamic point cloud generation, 3D Incremental Convex Hull, and 3D Delaunay Triangulation.
@@ -67,3 +68,7 @@ vcpkg integrate install
 2. Select your build target configuration (e.g., `Debug | x64` or `Release | x64`).
 3. Build the solution (`Ctrl + Shift + B`).
 4. Run the application (`F5` or `Shift + F10`).
+=======
+# MiniGameEngine
+Real-Time Engine &amp; Computational Geometry Simulation
+>>>>>>> a85baf3bc8d02bb12b0a7d2bd2929054a20c8f53
