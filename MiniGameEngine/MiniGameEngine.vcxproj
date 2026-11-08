@@ -162,6 +162,9 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\MiniGameEngine\Core\Engine.cpp" />
+    <ClCompile Include="src\Core\Engine.cpp" />
+    <ClCompile Include="src\Input\Input.cpp" />
     <ClCompile Include="src\main.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -234,25 +237,27 @@
       <ExternalWarningLevel>InheritWarningLevel</ExternalWarningLevel>
       <TreatExternalTemplatesAsInternal>true</TreatExternalTemplatesAsInternal>
       <DisableAnalyzeExternal>false</DisableAnalyzeExternal>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_UNICODE;UNICODE;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <LinkCompiled>true</LinkCompiled>
     </ClCompile>
+    <ClCompile Include="src\Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
-    <Folder Include="include\MiniGameEngine\Core\" />
-    <Folder Include="include\MiniGameEngine\Input\" />
     <Folder Include="include\MiniGameEngine\Math\" />
-    <Folder Include="include\MiniGameEngine\Time\" />
-    <Folder Include="src\Core\" />
-    <Folder Include="src\Input\" />
     <Folder Include="src\Math\" />
-    <Folder Include="src\Time\" />
     <Folder Include="vendor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="vcpkg.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\MiniGameEngine\Core\Engine.h" />
+    <ClInclude Include="include\MiniGameEngine\Core\EngineContext.h" />
+    <ClInclude Include="include\MiniGameEngine\Core\InfraStructure.h" />
+    <ClInclude Include="include\MiniGameEngine\Core\Utils.h" />
+    <ClInclude Include="include\MiniGameEngine\Input\Input.h" />
+    <ClInclude Include="include\MiniGameEngine\Time\Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
