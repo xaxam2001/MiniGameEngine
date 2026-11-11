@@ -4,8 +4,10 @@
 
 namespace mge
 {
-    struct InfraStructure
+    class InfraStructure
     {
+    public:
+        
 #ifdef _DEBUG
         std::string m_DebugName;
         const std::string& DebugName() {return m_DebugName;}

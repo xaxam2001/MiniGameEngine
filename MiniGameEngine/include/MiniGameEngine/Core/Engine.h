@@ -1,34 +1,23 @@
 ﻿#pragma once
+#include <vector>
+
+#include "BaseSystem.h"
 #include "InfraStructure.h"
 
 namespace mge
 {
     struct EngineContext;
     
-    struct Engine : InfraStructure
-    {
-        struct EngineSystem
-        {
-            double targetFrameRate = 1.0 / 60.0;
-            double accumulatedTime = 0.0;
-            int maxIterations = 2;
-            
-            bool Create() {return true;}
-            void Destroy() {}
-            bool Initialize() {return true;}
-            void Deinitialize() {}
-            void Update(float deltaTime) {}
-            void FixedUpdate(float deltaTime) {}
-        };
+    class Engine : public InfraStructure
+    {        
+        std::vector<BaseSystem*> m_Systems;
         
-        EngineSystem* m_AIEngine;
+        void ProcessSystems(double elapsedTime) const;
         
-        void ProcessSystems(double elapsedTime);
-        
+    public:
         bool Initialize() final;
-        
         void DeInitialize() final;
         
-        void Update(EngineContext& context);
+        void Update(const EngineContext& context) const;
     };
 }

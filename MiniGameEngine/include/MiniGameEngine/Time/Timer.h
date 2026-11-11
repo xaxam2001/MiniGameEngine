@@ -21,14 +21,16 @@ namespace mge
         bool bRepeat;
     };
     
-    struct Clock : InfraStructure
+    class Clock : public InfraStructure
     {
         std::vector<std::pair<Timer, std::function<void()>>> m_Timers;
+        std::vector<std::pair<Timer, std::function<void()>>> m_PendingTimers;
         
         TimeSource::TimePoint TimePointAtStartup;
         TimeSource::TimePoint PreviousTimePoint;
         TimeSource::TimePoint CurrentTimePoint;
         
+    public:
         double TimeSinceStartup = 0.0;
         double ElapsedTime = 0.0;
         
@@ -39,7 +41,8 @@ namespace mge
         
         void AddTimer(Timer& timer, std::function<void()> event)
         {
-            m_Timers.emplace_back(timer, event);
+            // add on a timer pending list to avoid conflict when AddTimer is called by a timer
+            m_PendingTimers.emplace_back(timer, event);
         }
     };
 }
